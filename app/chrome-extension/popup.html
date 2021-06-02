@@ -4,56 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Document</title>
   </head>
   <body>
     <main>
       <header>
         <span>
-          <h1>제목</h1>
+          <h1>어디서 볼까?</h1>
         </span>
       </header>
-      <div>
-        <h3>검색창</h3>
+      <div className =search-bar>
+        <form  className = "search-bar__form">
+          <input className ="search-bar__form__input" type="text">
+          <div className ="search-bar__form__emoji"></div>
+            <span><i class="fas fa-search"></i></span>
+          </div>
+        </form>
       </div>
       <section>
         <ul>
           <li>
-            <a>
-              <div>
+            <a href="https://ridibooks.com/" target="_blank" style="text-decoration: none;">
+              <div class = "platform__emoji">
                 <span> 이모티콘 </span>
               </div>
-              <div>
-                <span> 회사이름 </span>
+              <div class = "platform__text">
+                <span> 리디 </span>
                 <span> 화살표 </span>
               </div>
             </a>
           </li>
+          <hr>
           <li>
-            <a>
-              <div>
+            <a href="https://bookclub.yes24.com/BookClub/Main/" target="_blank">
+              <div class = "platform__emoji">
                 <span> 이모티콘 </span>
               </div>
-              <div>
-                <span> 회사이름 </span>
+              <div class = "platform__text">
+                <span> 북클럽 </span>
                 <span> 화살표 </span>
               </div>
             </a>
           </li>
+          <hr>
+          
           <li>
-            <a>
-              <div>
+            <a href="http://digital.kyobobook.co.kr/digital/ebook/ebookMain.ink?orderClick=c14" target="_blank">
+              <div class = "platform__emoji">
                 <span> 이모티콘 </span>
               </div>
-              <div>
-                <span> 회사이름 </span>
+              <div class = "platform__text">
+                <span> 교보</span>
                 <span> 화살표 </span>
               </div>
             </a>
           </li>
         </ul>
       </section>
+      <footer>
+        <a>
+          <h3>
+            피드백주세요
+          </h3>
+        </a>
+      </footer>
     </main>
-    <script src="findWhereToRead.js"></script>
+    <script 
+        src="https://kit.fontawesome.com/9c4f51facc.js" 
+        crossorigin="anonymous">
+    </script>
   </body>
 </html>
