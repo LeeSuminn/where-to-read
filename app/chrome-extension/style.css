@@ -22,11 +22,9 @@ form {
   justify-content: center;
   align-items: center;
 }
+
 ul {
   width: 100%;
-  /* display: flex;
-  flex-direction: column;
-  box-sizing: border-box; */
   padding-inline-start: 0;
   border: 1px solid black;
 }
@@ -43,13 +41,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  columns: black;
+  color: black;
 }
 
 a:visited {
   color: #040701;
 }
-.platform__emoji {
+a > div:nth-child(1) {
   width: 60px;
   height: 76px;
   display: flex;
@@ -57,14 +55,14 @@ a:visited {
   align-items: center;
 }
 
-.platform__text {
+a > div:nth-child(2) {
   width: 253px;
   height: 76px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.platform__text > span:nth-child(1) {
+a > div:nth-child(2) > span:nth-child(1) {
   width: 70%;
 }
 hr {
