@@ -1,5 +1,5 @@
 data/
 
-app/chrome-extension/booksinfo.json
+app/chrome-extension/booksInfo.json
 
 app/chrome-extension/scrapper.py
