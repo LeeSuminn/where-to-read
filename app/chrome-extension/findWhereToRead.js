@@ -101,14 +101,14 @@
   function makeNode(query, platform) {
     const $li = document.createElement('li');
     const $a = makeANode(query, platform);
-    const divs = makeDivNode(query, platform);
-    const hr = document.createElement('hr');
+    const $divNodes = makeDivNode(query, platform);
+    const $hr = document.createElement('hr');
     console.log($a);
-    divs.forEach((div) => {
-      $a.appendChild(div);
+    $divNodes.forEach(($div) => {
+      $a.appendChild($div);
     });
     $li.appendChild($a);
-    $li.appendChild(hr);
+    $li.appendChild($hr);
   
     return $li;
   }
