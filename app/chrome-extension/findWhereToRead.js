@@ -86,6 +86,17 @@
     return divPlatformTitle;
   }
   
+  function makeDivImageNode() {
+    const divImage = document.createElement('div');
+    const $image = document.createElement("img");
+
+    divImage.setAttribute("class", "platform__text__container__image")
+    $image.setAttribute("src", ARROW_IMAGE_LINK);
+    
+    divImage.appendChild($image);
+    return divImage;
+  }
+  
   function makeDivNode(platform) {
     const divFirstChild = document.createElement('div');
     divFirstChild.setAttribute(
@@ -95,13 +106,7 @@
       
     const divSecondChild = document.createElement('div');
     const divPlatformTitle = makePlatformTitleDiv(platform);
-    const divImage = document.createElement('div');
-    const $image = document.createElement("img");
-
-    divImage.setAttribute("class", "platform__text__container__image")
-    $image.setAttribute("src", ARROW_IMAGE_LINK);
-    
-    divImage.appendChild($image);
+    const divImage = makeDivImageNode();
     divSecondChild.appendChild(divPlatformTitle);
     divSecondChild.appendChild(divImage);
 
