@@ -10,6 +10,10 @@
 
   async function fetchBooks() {
     const response = await fetch("booksInfo.json");
+
+    if (!response.ok) {
+      throw new Error(`An error has occured: ${response.status}`)
+    }
     const books = await response.json();
     return books;
   }
@@ -26,7 +30,10 @@
       alert("찾는 책이 없습니다");
       window.location.reload();
     }
-  });
+  }).catch((e) => {
+    alert(e);
+    window.location.reload();
+  }) 
   function filterbook(query,books) {
     const filteredResult = books
       .filter(({ title }) => {
