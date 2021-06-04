@@ -76,10 +76,9 @@
 
     const divSecondChild = document.createElement('div');
     const divPlatformTitle = document.createElement('div');
-    const spanPlatform = document.createElement('span');
+    const spanPlatform = document.createElement('span')
     const spanTitle = document.createElement('span');
     spanPlatform.textContent = platformsInfo[platform].engToKor;
-    console.log(platform);
     spanTitle.textContent = query;
     
     divPlatformTitle.appendChild(spanPlatform);
@@ -88,6 +87,7 @@
     
     const divImage = document.createElement('div');
     const $image = document.createElement("img");
+
     divImage.setAttribute("class", "platform__text__container__image")
     $image.setAttribute("src", ARROW_IMAGE_LINK);
     
@@ -99,7 +99,7 @@
   }
 
   function makeNode(query, platform) {
-    const li = document.createElement('li');
+    const $li = document.createElement('li');
     const a = makeANode(query, platform);
     const divs = makeDivNode(query, platform);
     const hr = document.createElement('hr');
@@ -107,10 +107,10 @@
     divs.forEach((div) => {
       a.appendChild(div);
     });
-    li.appendChild(a);
-    li.appendChild(hr);
+    $li.appendChild(a);
+    $li.appendChild(hr);
   
-    return li;
+    return $li;
   }
   const $ul = document.querySelector('ul');
 }
