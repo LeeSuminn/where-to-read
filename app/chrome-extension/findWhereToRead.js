@@ -65,7 +65,6 @@
       engToKor: '교보SAM 무제한'
     },
   };
-
   function makeANode(query, platform) {
     const a = document.createElement('a');
     const { prefix, suffix } = platformsInfo[platform];
@@ -73,15 +72,8 @@
     a.setAttribute('target', '_blank');
     return a;
   }
-
-  function makeDivNode(query, platform) {
-    const divFirstChild = document.createElement('div');
-    divFirstChild.setAttribute(
-      'class',
-      `platform__emoji ${platformsInfo[platform].imageClass}`
-    );
-
-    const divSecondChild = document.createElement('div');
+  
+  function makePlatformTitleDiv(platform) {
     const divPlatformTitle = document.createElement('div');
     const spanPlatform = document.createElement('span')
     const spanTitle = document.createElement('span');
@@ -91,7 +83,18 @@
     divPlatformTitle.appendChild(spanPlatform);
     divPlatformTitle.appendChild(spanTitle);
     divPlatformTitle.setAttribute("class", "platform__text__container")
-    
+    return divPlatformTitle;
+  }
+  
+  function makeDivNode(platform) {
+    const divFirstChild = document.createElement('div');
+    divFirstChild.setAttribute(
+      'class',
+      `platform__emoji ${platformsInfo[platform].imageClass}`
+      );
+      
+    const divSecondChild = document.createElement('div');
+    const divPlatformTitle = makePlatformTitleDiv(platform);
     const divImage = document.createElement('div');
     const $image = document.createElement("img");
 
@@ -108,7 +111,7 @@
   function makeNode(query, platform) {
     const $li = document.createElement('li');
     const $a = makeANode(query, platform);
-    const $divNodes = makeDivNode(query, platform);
+    const $divNodes = makeDivNode( platform);
     const $hr = document.createElement('hr');
     console.log($a);
     $divNodes.forEach(($div) => {
