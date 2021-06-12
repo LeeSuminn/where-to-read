@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  width: 318px;
+}
+header {
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar__form__input {
+  width: 70%;
+}
+.search-bar__form__emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  margin: 0px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+ul {
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 100%;
+  padding-inline-start: 0;
+  margin-bottom: 10px;
+  /* border: 1px solid black; */
+}
+li {
+  width: 100%;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  cursor: pointer;
+  width: 318px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+a:visited {
+  color: #040701;
+}
+a > div:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3px;
+}
+
+.ridi {
+  background-image: url('./images/ridi_icon.png');
+  background-size: cover;
+}
+.book-club {
+  background-image: url('./images/yes24bookclub.png');
+  background-size: cover;
+}
+.kyobo {
+  background-image: url('./images/kyobo_icon.png');
+  background-size: cover;
+}
+
+a > div:nth-child(2) {
+  width: 253px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a > div:nth-child(2) > span:nth-child(1) {
+  width: 70%;
+}
+.platform__text__container {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.platform__text__container > span:nth-child(1) {
+  margin-top: 17px;
+  margin-right: auto;
+  height: 80%;
+  font-size: 17px;
+}
+.platform__text__container > span:nth-child(2) {
+  margin: auto;
+  opacity: 0.7;
+  font-size: 14px;
+  color: gray;
+}
+.platform__text__container__image {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .platform__text__container > span:nth-child(2) {
+} */
+.platform__text__something {
+  display: flex;
+  flex-direction: column;
+}
+hr {
+  margin: 0px;
+  width: 230px;
+  margin-left: 70px;
+  margin-top: 5px;
+  opacity: 0.3;
+}
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+footer > a > h3 {
+  margin-left: auto;
+}

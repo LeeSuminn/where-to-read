@@ -1,0 +1,5 @@
+data/
+
+app/chrome-extension/booksInfo.json
+
+app/chrome-extension/scrapper.py
